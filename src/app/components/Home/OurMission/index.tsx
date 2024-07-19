@@ -37,23 +37,23 @@ const OurMission: React.FC = () => {
           <Image
             src={player1}
             alt="player"
-            width={320}
-            height={350}
-            style={{ position: "relative", top: "-20px", left: "110px" }}
+            width={350}
+            height={380}
+            style={{ position: "relative", top: "-20px", left: "140px" }}
           />
           <Image
             src={player2}
             alt="player"
-            width={309}
-            height={389}
+            width={329}
+            height={420}
             style={{ position: "relative", top: "-80px", left: "60px" }}
           />
           <Image
             src={player3}
             alt="player"
-            width={369}
-            height={389}
-            style={{ position: "relative", top: "-80px", left: "-135px" }}
+            width={389}
+            height={420}
+            style={{ position: "relative", top: "-80px", left: "-175px" }}
           />
         </SectionImg>
       </SectionInfo>
@@ -63,8 +63,8 @@ const OurMission: React.FC = () => {
             src={team}
             alt="Logo"
             width={549}
-            height={309}
-            style={{ position: "relative", top: "-41px", left: "10px" }}
+            height={329}
+            style={{ position: "relative", top: "-37px", left: "20px" }}
           />
         </SectionImg>
         <SectionText
@@ -95,9 +95,9 @@ const OurMission: React.FC = () => {
           <Image
             src={coachs}
             alt="Logo"
-            width={550}
-            height={339}
-            style={{ position: "relative", top: "-55px", left: "0px" }}
+            width={580}
+            height={359}
+            style={{ position: "relative", top: "-50px", left: "0px" }}
           />
         </SectionImg>
       </SectionInfo>
@@ -114,7 +114,6 @@ const OurMission: React.FC = () => {
             style={{ position: "relative", top: "0px", left: "0px" }}
           />
         </SectionImg>
-
         <SectionText
           style={{
             textAlign: "right",
@@ -132,6 +131,7 @@ const OurMission: React.FC = () => {
             <Label
               style={{
                 textAlign: "left",
+                marginLeft: "10px",
               }}
             >
               Parceiro da Educação
