@@ -5,10 +5,8 @@ export const ContainerNavBar = styled.nav`
     justify-content: space-between;
     align-items: start;
     padding: 10px 20px;
-    width: 70%;
-    height: 280px;
-    border: 1px solid red;
-    margin-top: 20px;
+    width: 85%;
+    height: 220px;
     z-index: 2;
 `;
 

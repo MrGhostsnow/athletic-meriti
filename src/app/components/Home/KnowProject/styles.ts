@@ -24,6 +24,7 @@ export const KnowTheProject = styled.button`
     border: 0;
     margin: -55px 0 30px 0;
     z-index: 2;
+    font-family: 'Keania One';
 `;
 
 export const TitleKnowProject = styled.h1`

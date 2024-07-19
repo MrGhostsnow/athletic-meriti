@@ -8,7 +8,7 @@ const NavBar: React.FC = () => {
   return (
     <ContainerNavBar>
       <Logo>
-        <Image src={logo} alt="Logo" width={309} height={309} />{" "}
+        <Image src={logo} alt="Logo" width={280} height={280} />{" "}
       </Logo>
       <SectionLinks>
         <Link href="/" passHref>

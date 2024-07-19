@@ -33,11 +33,10 @@ export const SectionHeaderPage = styled.section`
       align-items: start;
       justify-content: center;
       gap: 10px;
-      width: 65%;
+      width: 80%;
       height: 100%;
       color: white;
       font-size: 24px;
-      border: 1px solid red;
 `;
 
 export const NamePage = styled.h1`
