@@ -31,7 +31,7 @@ export const SectionHeaderPage = styled.section`
       display: flex;
       flex-direction: column;
       align-items: start;
-      justify-content: center;
+      justify-content: start;
       gap: 10px;
       width: 80%;
       height: 100%;

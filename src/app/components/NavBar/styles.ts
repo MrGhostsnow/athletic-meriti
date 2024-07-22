@@ -2,11 +2,11 @@ import styled from "styled-components";
 
 export const ContainerNavBar = styled.nav`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: start;
     padding: 10px 20px;
-    width: 85%;
-    height: 220px;
+    width: 100%;
+    height: 160px;
     z-index: 2;
 `;
 
@@ -22,7 +22,6 @@ export const SectionLinks = styled.section`
     margin-top: 60px;
     width: 80%;
     font-size: 24px;
-    color: black;
 ;
 `;
 
