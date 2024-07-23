@@ -13,10 +13,40 @@ import {
   Description,
 } from "./styles";
 import { useState } from "react";
+import { formatDate } from "@/app/utils/formatDate";
 
-const ProjectCard: React.FC = () => {
+interface IProjectCardProps {
+  proponente: string;
+  fonteDeRecursos?: string;
+  valorDoProjeto: number;
+  status: string;
+  inicio: Date;
+  fim: Date;
+  local?: string;
+  numeroDeBeneficiarios?: number;
+  modalidadeEManifestacao?: string;
+  empresasParceiras?: string;
+  descricao: string;
+  imagem?: string;
+  type?: "Projeto" | "Cotação";
+}
+
+const ProjectCard: React.FC<IProjectCardProps> = ({
+  proponente,
+  fonteDeRecursos,
+  valorDoProjeto,
+  status,
+  inicio,
+  fim,
+  local,
+  numeroDeBeneficiarios,
+  modalidadeEManifestacao,
+  empresasParceiras,
+  descricao,
+  imagem,
+  type,
+}) => {
   const [showMore, setShowMore] = useState(true);
-  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <Card>
@@ -29,8 +59,8 @@ const ProjectCard: React.FC = () => {
             gap: "10rem",
           }}
         >
-          <Title>Campeões do futuro</Title>
-          <Type>Projeto</Type>
+          <Title>{proponente}</Title>
+          <Type>{type}</Type>
         </div>
         <div
           style={{
@@ -41,8 +71,12 @@ const ProjectCard: React.FC = () => {
             gap: "10px",
           }}
         >
-          <Status style={{ backgroundColor: isOpen ? "#77BD10" : "#686D66" }}>
-            {isOpen ? "ABERTO" : "ENCERRADO"}
+          <Status
+            style={{
+              backgroundColor: status === "aberto" ? "#77BD10" : "#686D66",
+            }}
+          >
+            {status}
           </Status>
           <ToggleLink onClick={() => setShowMore(!showMore)}>
             {showMore ? "ver menos" : "ver mais"}
@@ -53,34 +87,42 @@ const ProjectCard: React.FC = () => {
         <Content>
           <LeftSection>
             <Info>
-              <strong>Proponente:</strong> Projeto Campeões do futuro
+              <strong>Proponente:</strong> {proponente}
+            </Info>
+            {type === "Projeto" && (
+              <Info>
+                <strong>Fonte de recursos:</strong> {fonteDeRecursos}
+              </Info>
+            )}
+
+            <Info>
+              <strong>Valor do projeto:</strong> R${valorDoProjeto}
             </Info>
             <Info>
-              <strong>Fonte de recursos:</strong> xyzxyzxyzxyz
+              <strong>Período de execução:</strong>{" "}
+              {`de ${formatDate(inicio)} a ${formatDate(fim)}`}
             </Info>
-            <Info>
-              <strong>Valor do projeto:</strong> R$ 10.000,00
-            </Info>
-            <Info>
-              <strong>Período de execução:</strong> de 17/08/2020 a 17/08/2024
-            </Info>
-            <Info>
-              <strong>Local:</strong> Meriti/RJ
-            </Info>
-            <Info>
-              <strong>Nº de beneficiários:</strong> 1500 alunos e não alunos
-            </Info>
-            <Info>
-              <strong>Modalidade e manifestação:</strong> a partir de 12 anos
-            </Info>
-            <Info>
-              <strong>Empresas parceiras:</strong> NFL Júnior e RED BULL
-            </Info>
+            {type === "Projeto" && (
+              <>
+                <Info>
+                  <strong>Local:</strong> {local}
+                </Info>
+                <Info>
+                  <strong>Nº de beneficiários:</strong> {numeroDeBeneficiarios}
+                </Info>
+                <Info>
+                  <strong>Modalidade e manifestação:</strong>{" "}
+                  {modalidadeEManifestacao}
+                </Info>
+                <Info>
+                  <strong>Empresas parceiras:</strong> {empresasParceiras}
+                </Info>
+              </>
+            )}
           </LeftSection>
           <RightSection>
             <Description>
-              <strong>Descricão:</strong> Neste projeto trabalharemos a boa
-              relação entre competição e estratégia com jovens da periferia.
+              <strong>Descricão:</strong> {descricao}
             </Description>
             {/* Espaço reservado para imagem ou conteúdo adicional */}
             <div
@@ -89,7 +131,9 @@ const ProjectCard: React.FC = () => {
                 height: "100%",
                 backgroundColor: "#f0f0f0",
               }}
-            ></div>
+            >
+              {imagem}
+            </div>
           </RightSection>
         </Content>
       )}
