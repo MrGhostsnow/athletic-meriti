@@ -37,22 +37,22 @@ const OurMission: React.FC = () => {
           <Image
             src={player1}
             alt="player"
-            width={350}
-            height={380}
-            style={{ position: "relative", top: "-20px", left: "140px" }}
+            width={380}
+            height={430}
+            style={{ position: "relative", top: "-20px", left: "160px" }}
           />
           <Image
             src={player2}
             alt="player"
-            width={329}
-            height={420}
+            width={349}
+            height={460}
             style={{ position: "relative", top: "-80px", left: "60px" }}
           />
           <Image
             src={player3}
             alt="player"
-            width={389}
-            height={420}
+            width={410}
+            height={460}
             style={{ position: "relative", top: "-80px", left: "-175px" }}
           />
         </SectionImg>
@@ -62,9 +62,9 @@ const OurMission: React.FC = () => {
           <Image
             src={team}
             alt="Logo"
-            width={549}
-            height={329}
-            style={{ position: "relative", top: "-37px", left: "20px" }}
+            width={600}
+            height={372}
+            style={{ position: "relative", top: "-36px", left: "0px" }}
           />
         </SectionImg>
         <SectionText
@@ -95,9 +95,9 @@ const OurMission: React.FC = () => {
           <Image
             src={coachs}
             alt="Logo"
-            width={580}
-            height={359}
-            style={{ position: "relative", top: "-50px", left: "0px" }}
+            width={600}
+            height={389}
+            style={{ position: "relative", top: "-45px", left: "0px" }}
           />
         </SectionImg>
       </SectionInfo>

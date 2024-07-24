@@ -19,7 +19,7 @@ export const SectionInfo = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     height: 395px;
 `;
 
@@ -44,8 +44,8 @@ export const Text = styled.p`
 `;
 
 export const SectionImg = styled.div`
-    width: 508px;
-    height: 257px;
+    width: 600px;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,7 +65,7 @@ export const SectionPartner = styled.div`
 
 export const Label = styled.p`
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 600;
     color: #000;
 `;
 

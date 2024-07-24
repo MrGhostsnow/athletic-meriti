@@ -11,7 +11,7 @@ import NavBar from "../../NavBar";
 const TopPage: React.FC = () => {
   return (
     <ContainerTopPage>
-      <NavBar />
+      <NavBar color="#000" bgNavBar={false} />
       <SectionHeaderPage>
         <NamePage>ATHLETIC MERITI</NamePage>
         <DescriptionPage>

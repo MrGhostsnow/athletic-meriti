@@ -31,10 +31,10 @@ export const SectionHeaderPage = styled.section`
       display: flex;
       flex-direction: column;
       align-items: start;
-      justify-content: start;
+      justify-content: center;
       gap: 10px;
       width: 80%;
-      height: 100%;
+      height: 60%;
       color: white;
       font-size: 24px;
 `;
