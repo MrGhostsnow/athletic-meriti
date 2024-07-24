@@ -28,13 +28,13 @@ const NavBar: React.FC<NavBarProps> = ({ color, bgNavBar }) => {
         <Link href="/" passHref>
           <StyledLink>CONHEÇA O ATHLETIC MERITI</StyledLink>
         </Link>
-        <Link href="/about" passHref>
+        <Link href="/project" passHref>
           <StyledLink>PROJETOS E COTAÇÕES</StyledLink>
         </Link>
         <Link href="/contact" passHref>
           <StyledLink>CONTATO</StyledLink>
         </Link>
-        <Link href="/blog" passHref>
+        <Link href="/beADonor" passHref>
           <StyledLink>DOE</StyledLink>
         </Link>
       </SectionLinks>
