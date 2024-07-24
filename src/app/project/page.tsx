@@ -1,9 +1,9 @@
 "use client";
-import Footer from "../Footer";
-import NavBar from "../NavBar";
-import ContactAddress from "./ContactAddress";
+import Footer from "../components/Footer";
+import NavBar from "../components/NavBar";
+import ProjectsQuotation from "../components/Projects/ProjectsQuotation";
 
-const Contact: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <div
       style={{
@@ -14,10 +14,10 @@ const Contact: React.FC = () => {
       }}
     >
       <NavBar color="#fff" bgNavBar />
-      <ContactAddress />
+      <ProjectsQuotation />
       <Footer />
     </div>
   );
 };
 
-export default Contact;
+export default Projects;

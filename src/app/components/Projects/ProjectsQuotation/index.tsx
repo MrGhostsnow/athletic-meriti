@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 interface Project {
-  id: string;
+  _id: string;
   proponente: string;
   imagem: string;
   fonteDeRecursos: string;
@@ -22,7 +22,7 @@ interface Project {
 }
 
 interface Quotation {
-  id: string;
+  _id: string;
   proponente: string;
   imagem: string;
   valorDoProjeto: number;
@@ -67,7 +67,7 @@ const ProjectsQuotation: React.FC = () => {
           proponente={project.proponente}
           type={project.type}
           imagem={project.imagem}
-          key={project.id}
+          key={project._id}
           fonteDeRecursos={project.fonteDeRecursos}
           valorDoProjeto={project.valorDoProjeto}
           status={project.status}
@@ -86,7 +86,7 @@ const ProjectsQuotation: React.FC = () => {
           proponente={quotation.proponente}
           type={quotation.type}
           imagem={quotation.imagem}
-          key={quotation.id}
+          key={quotation._id}
           valorDoProjeto={quotation.valorDoProjeto}
           status={quotation.status}
           inicio={quotation.inicio}
