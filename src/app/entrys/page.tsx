@@ -3,6 +3,7 @@ import Entrys from "../components/Entrys";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import NavBarAdm from "../components/NavBarAdm";
+import withAuth from "../withAuth";
 
 const EntrysPage: React.FC = () => {
   return (
@@ -14,4 +15,4 @@ const EntrysPage: React.FC = () => {
   );
 };
 
-export default EntrysPage;
+export default withAuth(EntrysPage);

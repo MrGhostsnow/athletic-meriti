@@ -3,6 +3,7 @@ import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import NavBarAdm from "../components/NavBarAdm";
 import Form from "../components/NewProject/Form";
+import withAuth from "../withAuth";
 
 const NewProject: React.FC = () => {
   return (
@@ -14,4 +15,4 @@ const NewProject: React.FC = () => {
   );
 };
 
-export default NewProject;
+export default withAuth(NewProject);

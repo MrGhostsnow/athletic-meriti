@@ -2,6 +2,7 @@
 import Footer from "../components/Footer";
 import NavBarAdm from "../components/NavBarAdm";
 import Form from "../components/NewQuotation/Form";
+import withAuth from "../withAuth";
 
 const NewQuotation: React.FC = () => {
   return (
@@ -13,4 +14,4 @@ const NewQuotation: React.FC = () => {
   );
 };
 
-export default NewQuotation;
+export default withAuth(NewQuotation);
