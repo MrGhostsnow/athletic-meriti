@@ -2,8 +2,10 @@
 import {
   Card,
   Header,
+  SectionTitle,
   Title,
   Type,
+  SectionStatus,
   Status,
   ToggleLink,
   Content,
@@ -51,26 +53,11 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
   return (
     <Card>
       <Header>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "60%",
-            gap: "10rem",
-          }}
-        >
+        <SectionTitle>
           <Title>{proponente}</Title>
           <Type>{type}</Type>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "40%",
-            justifyContent: "space-around",
-            gap: "10px",
-          }}
-        >
+        </SectionTitle>
+        <SectionStatus>
           <Status
             style={{
               backgroundColor: status === "aberto" ? "#77BD10" : "#686D66",
@@ -81,7 +68,7 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           <ToggleLink onClick={() => setShowMore(!showMore)}>
             {showMore ? "ver menos" : "ver mais"}
           </ToggleLink>
-        </div>
+        </SectionStatus>
       </Header>
       {showMore && (
         <Content>

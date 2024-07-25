@@ -26,6 +26,18 @@ export const ContainerContent = styled.div`
   width: 80%;
   height: 1150px;
   background-color: #fff;
+
+  @media (max-width: 1024px) {
+    height: 1250px;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
+
+  @media (max-width: 425px) {
+    height: 1050px;
+  }
 `;
 
 
@@ -35,6 +47,16 @@ export const TextContent = styled.p`
   color: #000;
   width: 50%;
   font-family: 'Inter', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 25px;
+    width: 40%;
+  }
+
+  @media (max-width: 425px) {
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 
@@ -43,6 +65,10 @@ export const SectionImage = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: 425px) {
+      display: none;
+    }
 `;
 
 export const VectorImg = styled.span`

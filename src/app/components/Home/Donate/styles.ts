@@ -11,7 +11,6 @@ export const ContainerDonate = styled.div`
     background-image: url(${bgdonate.src}); 
     background-size: cover;
     background-repeat: no-repeat;
-
     position: relative; 
     justify-content: start;
     background-color: #fff;
@@ -21,25 +20,35 @@ export const SectionDonate = styled.section`
     display: flex;
     align-items: start;
     justify-content: space-around;
-    border: 1px solid red;
     border-radius: 24px;
     margin-top: 90px;
     background-color: #fff;
     height: 550px;
     width: 80%;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const TextDonate = styled.div`
     font-size: 24px;
     font-weight: 400;
     color: #000;
-    border: 1px solid red;
     height: 200px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
     gap: 20px;
+
+    @media (max-width: 768px) {
+        align-items: center;
+        text-align: center;
+        height: 300px;
+    }
 `;
 
 export const TitleDonate = styled.h2`
@@ -58,7 +67,6 @@ export const SectionButtonDonate = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    border: 1px solid red;
     background-color: #fff;
     height: 200px;
     justify-content: center;
@@ -72,6 +80,7 @@ export const ButtonDonate = styled.button`
     height: 80px;
     border-radius: 24px;
     border: 0;
-
+    cursor: pointer;
+    z-index: 2;
 `;
 

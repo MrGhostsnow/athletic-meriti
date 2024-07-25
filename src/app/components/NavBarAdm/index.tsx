@@ -16,7 +16,9 @@ const NavBarAdm: React.FC = () => {
       }}
     >
       <Logo>
-        <Image src={logo} alt="Logo" width={200} height={200} />
+        <Link href="/" passHref>
+          <Image src={logo} alt="Logo" width={200} height={200} />
+        </Link>
       </Logo>
       <SectionLinks>
         <Link href="/newProject" passHref>

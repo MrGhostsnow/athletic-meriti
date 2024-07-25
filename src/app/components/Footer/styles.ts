@@ -48,6 +48,10 @@ export const NameRigths = styled.p`
     font-weight: 400;
     color: #fff;
     font-family: 'Inter', sans-serif;
+
+    @media (max-width: 425px) {
+        text-align: center;
+    }
 `;
 
 

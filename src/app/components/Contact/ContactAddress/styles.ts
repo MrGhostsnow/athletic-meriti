@@ -12,6 +12,8 @@ export const ContainerContactAddress = styled.div`
     font-size: 50px;
     background-color: #000;
     padding: 60px 0;
+
+
 `;
 
 export const ContainerCards = styled.div`
@@ -20,6 +22,16 @@ export const ContainerCards = styled.div`
     height: 400px;
     justify-content: space-around;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        width: 95%;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        height: auto;
+        gap: 25px;
+    }
 `;
 
 

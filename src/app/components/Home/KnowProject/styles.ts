@@ -25,6 +25,10 @@ export const KnowTheProject = styled.button`
     margin: -55px 0 30px 0;
     z-index: 2;
     font-family: 'Keania One';
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `;
 
 export const TitleKnowProject = styled.h1`
@@ -34,4 +38,8 @@ export const TitleKnowProject = styled.h1`
     width: 930px;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
     font-family: 'Keania One', sans-serif;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 `

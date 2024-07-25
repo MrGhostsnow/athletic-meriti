@@ -2,6 +2,7 @@ import {
   ContainerOurMission,
   SectionImg,
   SectionInfo,
+  SectionInfoWork,
   SectionText,
   Text,
   Title,
@@ -19,11 +20,14 @@ import team3 from "../../../assets/team3.png";
 import coachs from "../../../assets/coachs.png";
 import shellLogo from "../../../assets/shell-logo.png";
 import saoFranciscoLogo from "../../../assets/saofrancisco-logo.png";
+import useWindowSize from "../../../hooks/useWindowSize";
 
 const OurMission: React.FC = () => {
+  const { width } = useWindowSize();
+
   return (
     <ContainerOurMission>
-      <SectionInfo style={{ marginTop: "100px" }}>
+      <SectionInfo className="first-info">
         <SectionText>
           <Title>NOSSA MISSÃO</Title>
           <Text>
@@ -37,41 +41,51 @@ const OurMission: React.FC = () => {
           <Image
             src={player1}
             alt="player"
-            width={380}
-            height={430}
-            style={{ position: "relative", top: "-20px", left: "160px" }}
+            width={width > 700 ? 380 : 280}
+            height={width > 700 ? 430 : 330}
+            style={{
+              position: "relative",
+              top: "-20px",
+              left: width > 700 ? "160px" : "50px",
+            }}
           />
           <Image
             src={player2}
             alt="player"
-            width={349}
-            height={460}
-            style={{ position: "relative", top: "-80px", left: "60px" }}
+            width={380}
+            height={430}
+            style={{
+              position: "relative",
+              top: width > 700 ? "-80px" : "-65px",
+              left: width > 700 ? "60px" : "-20px",
+            }}
           />
-          <Image
-            src={player3}
-            alt="player"
-            width={410}
-            height={460}
-            style={{ position: "relative", top: "-80px", left: "-175px" }}
-          />
+          {width > 700 && (
+            <Image
+              src={player3}
+              alt="player"
+              width={380}
+              height={430}
+              style={{ position: "relative", top: "-80px", left: "-175px" }}
+            />
+          )}
         </SectionImg>
       </SectionInfo>
-      <SectionInfo>
+      <SectionInfo className="column-reverse">
         <SectionImg style={{ background: "#77BD10" }}>
           <Image
             src={team}
             alt="Logo"
-            width={600}
-            height={372}
-            style={{ position: "relative", top: "-36px", left: "0px" }}
+            width={width > 700 ? 585 : 382}
+            height={width > 700 ? 372 : 300}
+            style={{
+              position: "relative",
+              top: width > 700 ? "-36px" : "0px",
+              left: width > 700 ? "20px" : "17px",
+            }}
           />
         </SectionImg>
-        <SectionText
-          style={{
-            textAlign: "right",
-          }}
-        >
+        <SectionText className="invert-text">
           <Title>NOSSA VISÃO</Title>
           <Text>
             Ser reconhecido como um modelo de excelência na promoção do esporte
@@ -96,29 +110,33 @@ const OurMission: React.FC = () => {
             src={coachs}
             alt="Logo"
             width={600}
-            height={389}
-            style={{ position: "relative", top: "-45px", left: "0px" }}
+            height={width > 700 ? 389 : 300}
+            style={{
+              position: "relative",
+              top: width > 700 ? "-45px" : "-0px",
+              left: width > 700 ? "0" : "10px",
+            }}
           />
         </SectionImg>
       </SectionInfo>
       <SpanHowWeWork>Como trabalhamos</SpanHowWeWork>
-      <SectionInfo style={{ height: "650px" }}>
+      <SectionInfoWork className="column-reverse">
         <SectionImg
-          style={{ background: "#125492", width: "630px", height: "489px" }}
+          style={{
+            background: "#125492",
+            width: width > 700 ? "630px" : "380px",
+            height: "469px",
+          }}
         >
           <Image
             src={team2}
             alt="Logo"
-            width={559}
-            height={559}
+            width={width > 700 ? 519 : 382}
+            height={width > 700 ? 519 : 382}
             style={{ position: "relative", top: "0px", left: "0px" }}
           />
         </SectionImg>
-        <SectionText
-          style={{
-            textAlign: "right",
-          }}
-        >
+        <SectionText className="invert-text">
           <Title>EDUCAÇÃO ESPORTIVA</Title>
           <Text>
             Oferecemos treinamentos regulares de basquetebol para crianças,
@@ -128,19 +146,12 @@ const OurMission: React.FC = () => {
             inclusão e cidadania.
           </Text>
           <SectionPartner>
-            <Label
-              style={{
-                textAlign: "left",
-                marginLeft: "10px",
-              }}
-            >
-              Parceiro da Educação
-            </Label>
+            <Label>Parceiro da Educação</Label>
             <Image src={shellLogo} alt="Logo" width={200} height={120} />
           </SectionPartner>
         </SectionText>
-      </SectionInfo>
-      <SectionInfo style={{ height: "650px" }}>
+      </SectionInfoWork>
+      <SectionInfoWork>
         <SectionText>
           <Title>COMPETIÇÕES E CAMPEONATOS</Title>
           <Text>
@@ -149,23 +160,27 @@ const OurMission: React.FC = () => {
             aplicar habilidades e valores, superar obstáculos, trabalhar em
             equipe, lidar com pressão e aprender com vitórias e derrotas.
           </Text>
-          <SectionPartner>
+          <SectionPartner className="partner-invert">
             <Label>Parceiro de Competições</Label>
             <Image src={saoFranciscoLogo} alt="Logo" width={280} height={150} />
           </SectionPartner>
         </SectionText>
         <SectionImg
-          style={{ background: "#2C3F0E", width: "630px", height: "489px" }}
+          style={{
+            background: "#2C3F0E",
+            width: width > 700 ? "630px" : "380px",
+            height: "469px",
+          }}
         >
           <Image
             src={team3}
             alt="Logo"
-            width={559}
-            height={559}
+            width={width > 700 ? 519 : 382}
+            height={width > 700 ? 519 : 382}
             style={{ position: "relative", top: "0px", left: "0px" }}
           />
         </SectionImg>
-      </SectionInfo>
+      </SectionInfoWork>
     </ContainerOurMission>
   );
 };

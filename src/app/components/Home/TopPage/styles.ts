@@ -37,6 +37,10 @@ export const SectionHeaderPage = styled.section`
       height: 60%;
       color: white;
       font-size: 24px;
+
+      @media (max-width: 768px) {
+        width: 90%;
+      }
 `;
 
 export const NamePage = styled.h1`
@@ -48,6 +52,14 @@ export const DescriptionPage = styled.p`
       color: #ff;
       font-size: 72px;
       width: 80%;
+
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media (max-width: 425px) {
+        font-size: 56px;
+      }
 `;
 
 export const ButtonPage = styled.button`

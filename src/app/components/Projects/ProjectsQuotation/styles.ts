@@ -21,4 +21,8 @@ export const TitleProjectQuotation = styled.h1`
     font-size: 40px;
     font-weight: 400;
     color: #fff;    
+
+    @media (max-width: 425px) {
+        font-size: 30px;
+    }
 `;

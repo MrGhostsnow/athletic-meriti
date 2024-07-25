@@ -12,6 +12,14 @@ export const SpanChoose = styled.span`
     justify-content: center;
     border-radius: 12px;
     font-size: 28px;
+
+    @media (max-width: 1024px) {
+        top: 1500px;
+    }
+
+    @media (max-width: 425px) {
+        top: 1300px;
+    }
 `;
 
 
@@ -25,6 +33,19 @@ export const ContainerChooseDonate = styled.div`
     background-color: #FA9E41;
     border-radius: 24px;
     margin-bottom: 50px;
+
+    @media (max-width: 1024px) {
+        height: 300px;
+    }
+
+    @media (max-width: 768px) {
+        height: 450px;
+    }
+
+    @media (max-width: 425px) {
+        height: 500px;
+        width: 90%;
+    }
 `;
 
 
@@ -34,6 +55,12 @@ export const SectionOptions = styled.section`
     height: 200px;
     align-items: center;
     justify-content: space-around;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+    }
 `;
 
 
@@ -61,6 +88,10 @@ export const Infos = styled.div`
     border-radius: 24px;
     text-align: start;
     gap: 10px;
+
+    @media (max-width: 1024px) {
+        width: 300px;
+    }
 `;
 
 

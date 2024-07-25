@@ -9,8 +9,11 @@ import {
 } from "./styles";
 import Image from "next/image";
 import atlhetic from "../../../assets/atlhetic.png";
+import { useRouter } from "next/navigation";
 
 const Donate: React.FC = () => {
+  const router = useRouter();
+
   return (
     <ContainerDonate>
       <SectionDonate>
@@ -21,21 +24,31 @@ const Donate: React.FC = () => {
           </DescriptionDonate>
         </TextDonate>
         <SectionButtonDonate>
-          <ButtonDonate style={{ backgroundColor: "#F24405" }}>
+          <ButtonDonate
+            style={{ backgroundColor: "#F24405" }}
+            onClick={() => {
+              router.push("/contact");
+            }}
+          >
             AGENDE SUA AULA
           </ButtonDonate>
-          <ButtonDonate style={{ backgroundColor: "#ACF213" }}>
+          <ButtonDonate
+            style={{ backgroundColor: "#ACF213" }}
+            onClick={() => {
+              router.push("/beADonor");
+            }}
+          >
             FAÇA UMA DOAÇÃO
           </ButtonDonate>
         </SectionButtonDonate>
       </SectionDonate>
-      <Image
+      {/* <Image
         src={atlhetic}
         alt="Logo"
         width={1200}
         height={509}
         style={{ position: "absolute", top: "230px", left: "120px" }}
-      />
+      /> */}
     </ContainerDonate>
   );
 };
