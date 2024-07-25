@@ -14,20 +14,26 @@ background-position: center;
 height: 100vh; 
 `;
 
-export const KnowTheProject = styled.button`
+export const KnowTheProject = styled.p`
     background-color: #DD8934;
     color: #000;
-    font-size: 24px;
+    font-size: 34px;
     width: 800px;
     height: 100px;
     border-radius: 24px;
     border: 0;
     margin: -55px 0 30px 0;
     z-index: 2;
-    font-family: 'Keania One';
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @media (max-width: 768px) {
         width: 90%;
+    }
+
+    @media (max-width: 425px) {
+        font-size: 24px;
     }
 `;
 

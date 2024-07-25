@@ -76,11 +76,13 @@ export const SectionButtonDonate = styled.section`
 export const ButtonDonate = styled.button`
     color: #000;
     font-size: 18px;
+    font-weight: 700;
     width: 280px;
     height: 80px;
     border-radius: 24px;
     border: 0;
     cursor: pointer;
     z-index: 2;
+    font-family: "Keania One";
 `;
 

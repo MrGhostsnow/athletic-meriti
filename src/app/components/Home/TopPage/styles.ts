@@ -62,7 +62,7 @@ export const DescriptionPage = styled.p`
       }
 `;
 
-export const ButtonPage = styled.button`
+export const ButtonPage = styled.p`
       width: 300px;
       height: 50px;
       background-color: #16A5F0;
@@ -70,6 +70,12 @@ export const ButtonPage = styled.button`
       border-radius: 24px;
       border: none;
       cursor: pointer;
-      font-size: 18px;
-      font-family: ""
+      font-size: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @media (max-width: 425px) {
+        font-size: 18px;
+      }
 `;
