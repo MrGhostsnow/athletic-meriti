@@ -1,4 +1,3 @@
-/* styles.ts */
 import styled from "styled-components";
 
 export const ContainerNavBar = styled.nav`
@@ -10,6 +9,10 @@ export const ContainerNavBar = styled.nav`
   height: 160px;
   position: relative; /* Para o overlay */
   z-index: 2;
+
+  @media (max-width: 1024px) {
+    padding: 20px;
+  }
 
   @media (max-width: 768px) {
     padding: 10px;
@@ -26,7 +29,7 @@ export const SectionLinks = styled.section`
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-top: 60px;
+  margin-top: 0px;
   width: 80%;
   font-size: 24px;
 
@@ -41,6 +44,7 @@ export const SectionLinks = styled.section`
 
 export const StyledLink = styled.p`
   margin: 0;
+  width: 200px;
 `;
 
 export const MenuButton = styled.button`

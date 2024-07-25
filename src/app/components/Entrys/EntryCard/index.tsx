@@ -1,5 +1,13 @@
 import Image from "next/image";
-import { Card, Header, Title, Type, Status } from "./styles";
+import {
+  Card,
+  Header,
+  Title,
+  Type,
+  Status,
+  SectionStatus,
+  SectionTitle,
+} from "./styles";
 import trashIcon from "../../../assets/trash-icon.png";
 
 interface IEntryProps {
@@ -22,26 +30,11 @@ const EntryCard: React.FC<IEntryProps> = ({
   return (
     <Card>
       <Header>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "60%",
-            gap: "10rem",
-          }}
-        >
+        <SectionTitle>
           <Title>{proponente}</Title>
           <Type>{type}</Type>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            width: "40%",
-            justifyContent: "space-around",
-            gap: "10px",
-          }}
-        >
+        </SectionTitle>
+        <SectionStatus>
           <Status
             style={{
               backgroundColor: status === "aberto" ? "#77BD10" : "#686D66",
@@ -69,7 +62,7 @@ const EntryCard: React.FC<IEntryProps> = ({
           >
             editar
           </p>
-        </div>
+        </SectionStatus>
       </Header>
     </Card>
   );

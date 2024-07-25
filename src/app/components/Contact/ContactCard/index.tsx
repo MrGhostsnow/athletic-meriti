@@ -34,7 +34,9 @@ const ContactCard: React.FC<ContactCardProps> = ({
       </TitleContactCard>
       <TextContactCard>{text}</TextContactCard>
       {isButton ? (
-        <ButtonContactCard>FALE PELO WHATSAPP</ButtonContactCard>
+        <ButtonContactCard href="https://wa.me/5521994198950" target="_blank">
+          FALE PELO WHATSAPP
+        </ButtonContactCard>
       ) : (
         <InfoContact>{info}</InfoContact>
       )}

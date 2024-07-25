@@ -10,6 +10,14 @@ export const Card = styled.div`
   width: 900px;
   height: auto;
   margin: 20px;
+
+  @media (max-width: 768px) {
+    width: 600px;
+  }
+
+  @media (max-width: 425px) {
+    width: 350px;
+  }
 `;
 
 export const Header = styled.div`
@@ -20,6 +28,24 @@ export const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   height: 100px;
+
+  @media (max-width: 425px) {
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+`;
+
+export const SectionTitle = styled.div`
+  display: flex;
+  align-items: center;
+  width: 50%;
+  gap: 1rem;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -27,6 +53,10 @@ export const Title = styled.h2`
   font-size: 20px;
   font-family: 'Inter', sans-serif;
   color: #000;
+  
+  @media (max-width: 425px) {
+    width: 200px;
+  }
 `;
 
 export const Type = styled.p`
@@ -36,6 +66,19 @@ export const Type = styled.p`
   font-style: italic;
   color: #000;
 `;
+
+export const SectionStatus = styled.div`
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: space-around;
+  gap: 10px;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+`;
+
 
 export const Status = styled.span`
   display: flex;

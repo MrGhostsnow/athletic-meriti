@@ -16,6 +16,10 @@ export const SectionInput = styled.div`
   align-items: start;
   width: 650px;
   gap: 5px;
+
+  @media (max-width: 425px) {
+    width: 350px;
+  }
 `;
 
 export const SectionInputRow = styled.div`
@@ -23,6 +27,11 @@ export const SectionInputRow = styled.div`
   align-items: start;
   width: 650px;
   gap: 10px;
+
+  @media (max-width: 425px) {
+    width: 350px;
+    flex-direction: column;
+  }
 `;
 
 

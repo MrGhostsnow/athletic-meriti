@@ -39,7 +39,7 @@ export const TextContactCard = styled.p`
     width: 80%;
 `;
 
-export const ButtonContactCard = styled.button`
+export const ButtonContactCard = styled.a`
     background-color: #16A5F0;
     border: none;
     width: 250px;
@@ -49,10 +49,14 @@ export const ButtonContactCard = styled.button`
     font-family: 'Inter', sans-serif;
     color: #fff;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `;
 
-export const InfoContact = styled.p`
+export const InfoContact = styled.a`
     font-size: 16px;
     font-weight: 600;
     font-family: 'Inter', sans-serif;
+    cursor: pointer;
 `;
