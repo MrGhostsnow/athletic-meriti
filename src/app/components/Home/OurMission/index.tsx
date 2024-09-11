@@ -56,7 +56,7 @@ const OurMission: React.FC = () => {
             height={430}
             style={{
               position: "relative",
-              top: width > 700 ? "-80px" : "-65px",
+              top: width > 700 ? "-65px" : "-65px",
               left: width > 700 ? "60px" : "-20px",
             }}
           />
@@ -66,7 +66,7 @@ const OurMission: React.FC = () => {
               alt="player"
               width={380}
               height={430}
-              style={{ position: "relative", top: "-80px", left: "-175px" }}
+              style={{ position: "relative", top: "-65px", left: "-155px" }}
             />
           )}
         </SectionImg>
@@ -76,12 +76,12 @@ const OurMission: React.FC = () => {
           <Image
             src={team}
             alt="Logo"
-            width={width > 700 ? 585 : 382}
+            width={width > 700 ? 545 : 382}
             height={width > 700 ? 372 : 300}
             style={{
               position: "relative",
               top: width > 700 ? "-36px" : "0px",
-              left: width > 700 ? "20px" : "17px",
+              left: width > 700 ? "2px" : "17px",
             }}
           />
         </SectionImg>

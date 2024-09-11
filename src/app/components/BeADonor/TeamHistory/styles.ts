@@ -72,8 +72,8 @@ export const SectionImage = styled.div`
 `;
 
 export const VectorImg = styled.span`
-    background-color: #83CAEF;
-    height: 650px;
-    width: 250px;
+    // background-color: #83CAEF;
+    height: 850px;
+    width: 400px;
 
 `;

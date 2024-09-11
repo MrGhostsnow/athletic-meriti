@@ -18,7 +18,8 @@ export const ContainerDonate = styled.div`
 
 export const SectionDonate = styled.section`
     display: flex;
-    align-items: start;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     border-radius: 24px;
     margin-top: 90px;

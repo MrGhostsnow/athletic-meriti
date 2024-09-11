@@ -10,6 +10,7 @@ import Image from "next/image";
 
 import player4 from "../../../assets/player4.png";
 import player5 from "../../../assets/player5.png";
+import donate from "../../../assets/donate.png";
 import coach from "../../../assets/coach.png";
 import ChooseDonate from "../ChooseDonate";
 
@@ -43,7 +44,8 @@ const TeamHistory: React.FC = () => {
         </TextContent>
         <SectionImage>
           <VectorImg>
-            <Image
+            <Image src={donate} alt="player" width={730} height={960} />
+            {/* <Image
               src={player5}
               alt="player"
               width={530}
@@ -63,7 +65,7 @@ const TeamHistory: React.FC = () => {
               width={500}
               height={600}
               style={{ position: "relative", top: "-690px", left: "-105px" }}
-            />
+            /> */}
           </VectorImg>
         </SectionImage>
       </ContainerContent>
