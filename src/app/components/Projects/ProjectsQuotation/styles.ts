@@ -13,6 +13,7 @@ export const ContainerProjectQuotation = styled.div`
     position: relative; 
     justify-content: space-between;
     background-color: #fff;
+    padding: 60px 0;
 `;
 
 
