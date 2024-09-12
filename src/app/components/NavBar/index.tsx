@@ -37,7 +37,7 @@ const NavBar: React.FC<NavBarProps> = ({ color, bgNavBar }) => {
         }}
       >
         <Logo>
-          <Image src={logo} alt="Logo" width={150} height={150} />
+          <Image src={logo} alt="Logo" width={180} height={180} />
         </Logo>
         <SectionLinks>
           <Link href="/" passHref>

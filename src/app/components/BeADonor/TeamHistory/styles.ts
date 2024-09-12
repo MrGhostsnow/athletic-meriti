@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import backgroundImg from "../../../assets/bg-court-blue.png";
 
 export const ContainerTeamHistory = styled.div`
   display: flex;
@@ -8,6 +8,11 @@ export const ContainerTeamHistory = styled.div`
   justify-content: space-around;
   width: 100%;
   background-color: #fff;
+  background-image: url(${backgroundImg.src}); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; 
 `;
 
 
@@ -24,8 +29,8 @@ export const ContainerContent = styled.div`
   align-items: center;
   justify-content: center;
   width: 80%;
-  height: 1150px;
-  background-color: #fff;
+  height: 1000px;
+  
 
   @media (max-width: 1024px) {
     height: 1250px;
@@ -73,7 +78,7 @@ export const SectionImage = styled.div`
 
 export const VectorImg = styled.span`
     // background-color: #83CAEF;
-    height: 850px;
-    width: 400px;
+    height: 1100px;
+    width: 600px;
 
 `;

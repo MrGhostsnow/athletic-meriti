@@ -1,5 +1,6 @@
 "use client";
 import { useForm, SubmitHandler } from "react-hook-form";
+import { useRouter } from "next/navigation";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import {
@@ -57,6 +58,8 @@ const FormQuotation = () => {
     resolver: yupResolver(schema),
   });
 
+  const router = useRouter();
+
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
     try {
       const response = await axios.post(
@@ -64,6 +67,7 @@ const FormQuotation = () => {
         data
       );
       console.log(response.data);
+      router.push("/entrys");
     } catch (error) {
       console.error("There was an error creating the project!", error);
     }

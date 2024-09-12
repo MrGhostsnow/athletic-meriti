@@ -1,19 +1,18 @@
 import styled from "styled-components";
+import backgroundImg from "../../../assets/bg-court-blue.png";
 
 export const ContainerProjectQuotation = styled.div`
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 30px;
-    position: relative;
-    top: 0px;
-    height: 100%;
-    color: #000;
-    border-radius: 24px;
-    font-size: 50px;
-    background-color: #000;
-    padding: 60px 0;
+    background-image: url(${backgroundImg.src}); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; 
+    justify-content: space-between;
+    background-color: #fff;
 `;
 
 

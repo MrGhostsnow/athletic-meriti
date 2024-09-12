@@ -44,7 +44,7 @@ const TeamHistory: React.FC = () => {
         </TextContent>
         <SectionImage>
           <VectorImg>
-            <Image src={donate} alt="player" width={730} height={960} />
+            <Image src={donate} alt="player" width={830} height={1160} />
             {/* <Image
               src={player5}
               alt="player"

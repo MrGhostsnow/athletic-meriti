@@ -184,13 +184,13 @@ const EditForm: React.FC<EditFormProps> = ({
             />
           </SectionInput>
         )}
-        <Button type="submit">Save</Button>
+        <Button type="submit">Salvar</Button>
         <Button
           type="button"
           style={{ backgroundColor: "red" }}
           onClick={onCancel}
         >
-          Cancel
+          Cancelar
         </Button>
       </form>
     </FormContainer>

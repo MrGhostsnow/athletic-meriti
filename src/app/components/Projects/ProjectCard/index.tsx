@@ -16,6 +16,7 @@ import {
 } from "./styles";
 import { useState } from "react";
 import { formatDate } from "@/app/utils/formatDate";
+import Image from "next/image";
 
 interface IProjectCardProps {
   proponente: string;
@@ -109,18 +110,20 @@ const ProjectCard: React.FC<IProjectCardProps> = ({
           </LeftSection>
           <RightSection>
             <Description>
-              <strong>Descricão:</strong> {descricao}
+              <strong>Descrição:</strong> {descricao}
             </Description>
-            {/* Espaço reservado para imagem ou conteúdo adicional */}
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                backgroundColor: "#f0f0f0",
-              }}
-            >
-              {imagem}
-            </div>
+            {imagem && (
+              <div
+                style={{ width: "100%", height: "300px", position: "relative" }}
+              >
+                <Image
+                  src={imagem}
+                  alt="Imagem do projeto"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+            )}
           </RightSection>
         </Content>
       )}

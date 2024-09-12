@@ -10,6 +10,10 @@ import {
 } from "./styles";
 
 const ChooseDonate: React.FC = () => {
+  const handleRedirect = () => {
+    window.open("https://www.catarse.me/AthleticMeriti", "_blank");
+  };
+
   return (
     <ContainerChooseDonate>
       <SpanChoose>ESCOLHA COMO DOAR</SpanChoose>
@@ -17,9 +21,8 @@ const ChooseDonate: React.FC = () => {
         <Option>
           <TitleOption>PIX</TitleOption>
           <Infos>
-            <Info>Chave PIX: sikdjfjsdifosijfioejfoiejf</Info>
+            <Info>Chave PIX: CNPJ 33.708.448/0001-13</Info>
             <Info>Associação Desportiva Athletic Meriti</Info>
-            <Info>CNPJ 33.708.448/0001-13</Info>
           </Infos>
         </Option>
         <Option>
@@ -28,7 +31,7 @@ const ChooseDonate: React.FC = () => {
             <Info style={{ fontWeight: "800" }}>
               <strong>Contribua através do Catarse</strong>
             </Info>
-            <ButtonDonate>CLIQUE AQUI</ButtonDonate>
+            <ButtonDonate onClick={handleRedirect}>CLIQUE AQUI</ButtonDonate>
           </Infos>
         </Option>
       </SectionOptions>

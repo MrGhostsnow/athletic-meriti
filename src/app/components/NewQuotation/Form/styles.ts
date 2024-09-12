@@ -1,13 +1,21 @@
 import styled from "styled-components";
+import backgroundImg from "../../../assets/bg-court-blue.png";
+
 
 export const FormContainer = styled.div`
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding: 20px;
-  gap: 20px;
+  background-image: url(${backgroundImg.src}); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative; 
+  justify-content: space-between;
+  background-color: #fff;
 `;
 
 export const SectionInput = styled.div`

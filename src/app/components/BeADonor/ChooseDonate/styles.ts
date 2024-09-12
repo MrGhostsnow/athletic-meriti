@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SpanChoose = styled.span`
     position: absolute;
-    top: 1400px;
+    top: 1100px;
     color: #fff;
     background-color: #77BD10;
     width: 300px;

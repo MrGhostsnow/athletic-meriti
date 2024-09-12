@@ -21,7 +21,10 @@ export const ContainerNavBar = styled.nav`
 `;
 
 export const Logo = styled.div`
-  /* Adicione estilos se necessário */
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const SectionLinks = styled.section`
@@ -44,7 +47,12 @@ export const SectionLinks = styled.section`
 
 export const StyledLink = styled.p`
   margin: 0;
-  width: 200px;
+  width: 250px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    width: 170px;
+  }
 `;
 
 export const MenuButton = styled.button`

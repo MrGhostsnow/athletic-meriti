@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import EntryCard from "./EntryCard";
 import EditForm from "./EditForm";
+import backgroundImg from "../../assets/bg-court-blue.png";
 
 interface ProjectEntry {
   proponente: string;
@@ -140,8 +141,14 @@ const Entrys: React.FC = () => {
         width: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "center",
         alignItems: "center",
+        backgroundImage: `url(${backgroundImg.src})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        position: "relative",
+        justifyContent: "space-between",
+        backgroundColor: "#fff",
         gap: "20px",
         padding: "40px",
       }}
