@@ -120,6 +120,8 @@ export const Description = styled.p`
   margin-top: 0;
   font-size: 18px;
   font-family: 'Inter', sans-serif;
+  color: #333; 
+  word-break: break-all;
 `;
 
 export const Info = styled.p`
