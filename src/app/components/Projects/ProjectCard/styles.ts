@@ -121,7 +121,7 @@ export const Description = styled.p`
   font-size: 18px;
   font-family: 'Inter', sans-serif;
   color: #333; 
-  word-break: break-all;
+  word-break: break-word;
 `;
 
 export const Info = styled.p`
