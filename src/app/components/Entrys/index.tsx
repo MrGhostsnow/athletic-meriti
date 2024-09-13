@@ -33,6 +33,8 @@ interface QuotationEntry {
   _id: string;
 }
 
+const apiUrl = "https://back-athletic.onrender.com";
+
 const Entrys: React.FC = () => {
   const [projects, setProjects] = useState<ProjectEntry[]>([]);
   const [quotations, setQuotations] = useState<QuotationEntry[]>([]);
@@ -54,7 +56,7 @@ const Entrys: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/quotacoes")
+      .get(`${apiUrl}/quotacoes`)
       .then((response) => {
         setQuotations(response.data);
       })
@@ -66,8 +68,8 @@ const Entrys: React.FC = () => {
   const handleDelete = (_id: string, type: "Projeto" | "Cotação") => {
     const url =
       type === "Projeto"
-        ? `http://localhost:4000/projetos/${_id}`
-        : `http://localhost:4000/quotacoes/${_id}`;
+        ? `${apiUrl}/projetos/${_id}`
+        : `${apiUrl}/quotacoes/${_id}`;
     axios
       .delete(url)
       .then((response) => {
@@ -106,8 +108,8 @@ const Entrys: React.FC = () => {
     if (editData) {
       const url =
         editData.type === "Projeto"
-          ? `http://localhost:4000/projetos/${editData._id}`
-          : `http://localhost:4000/quotacoes/${editData._id}`;
+          ? `${apiUrl}/projetos/${editData._id}`
+          : `${apiUrl}/quotacoes/${editData._id}`;
       axios
         .put(url, editData)
         .then((response) => {

@@ -78,9 +78,11 @@ const Form = () => {
 
   const router = useRouter();
 
+  const apiUrl = "https://back-athletic.onrender.com";
+
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
     try {
-      const response = await axios.post("http://localhost:4000/projetos", data);
+      const response = await axios.post(`${apiUrl}/projetos`, data);
       console.log(response.data);
       router.push("/entrys");
     } catch (error) {

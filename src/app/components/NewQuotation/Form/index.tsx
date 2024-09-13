@@ -60,12 +60,11 @@ const FormQuotation = () => {
 
   const router = useRouter();
 
+  const apiUrl = "https://back-athletic.onrender.com";
+
   const onSubmit: SubmitHandler<IFormInputs> = async (data) => {
     try {
-      const response = await axios.post(
-        "http://localhost:4000/quotacoes",
-        data
-      );
+      const response = await axios.post(`${apiUrl}/quotacoes`, data);
       console.log(response.data);
       router.push("/entrys");
     } catch (error) {

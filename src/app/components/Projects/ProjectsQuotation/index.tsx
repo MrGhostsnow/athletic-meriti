@@ -33,13 +33,15 @@ interface Quotation {
   type: "Cotação";
 }
 
+const apiUrl = "https://back-athletic.onrender.com";
+
 const ProjectsQuotation: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [quotation, setQuotation] = useState<Quotation[]>([]);
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/projetos")
+      .get(`${apiUrl}/projetos`)
       .then((response) => {
         setProjects(response.data);
       })
@@ -50,7 +52,7 @@ const ProjectsQuotation: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/quotacoes")
+      .get(`${apiUrl}/quotacoes`)
       .then((response) => {
         setQuotation(response.data);
       })

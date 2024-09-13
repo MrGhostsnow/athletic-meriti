@@ -10,6 +10,8 @@ import {
   SectionInput,
 } from "../components/Entrys/EditForm/styles";
 
+const apiUrl = "https://back-athletic.onrender.com";
+
 const Login = () => {
   const [username, setUsername] = useState<string>("");
   const [password, setPassword] = useState<string>("");
@@ -18,7 +20,7 @@ const Login = () => {
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:4000/auth/login", {
+      const response = await axios.post(`${apiUrl}/auth/login`, {
         username,
         password,
       });
