@@ -13,7 +13,7 @@ export const ContainerDonate = styled.div`
     background-repeat: no-repeat;
     position: relative; 
     justify-content: start;
-    background-color: #fff;
+    background-color: blue;
 `;
 
 export const SectionDonate = styled.section`
@@ -24,7 +24,7 @@ export const SectionDonate = styled.section`
     border-radius: 24px;
     margin-top: 90px;
     background-color: #fff;
-    height: 550px;
+    height: 450px;
     width: 80%;
 
     @media (max-width: 768px) {
