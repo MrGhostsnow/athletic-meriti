@@ -37,11 +37,11 @@ export const ContainerContent = styled.div`
   }
 
   @media (max-width: 768px) {
-    width: 95%;
+   height: 750px;
   }
 
   @media (max-width: 425px) {
-    height: 1050px;
+    height: 1090px;
   }
 `;
 
@@ -55,7 +55,8 @@ export const TextContent = styled.p`
 
   @media (max-width: 768px) {
     font-size: 25px;
-    width: 40%;
+    width: 90%;
+    text-align: center;
   }
 
   @media (max-width: 425px) {
@@ -71,7 +72,7 @@ export const SectionImage = styled.div`
     align-items: center;
     justify-content: center;
 
-    @media (max-width: 425px) {
+    @media (max-width: 768px) {
       display: none;
     }
 `;
