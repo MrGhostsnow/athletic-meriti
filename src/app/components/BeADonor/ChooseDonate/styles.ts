@@ -14,11 +14,11 @@ export const SpanChoose = styled.span`
     font-size: 28px;
 
     @media (max-width: 1024px) {
-        top: 1500px;
+        top: 1335px;
     }
 
     @media (max-width: 425px) {
-        top: 1300px;
+        top: 1130px;
     }
 `;
 

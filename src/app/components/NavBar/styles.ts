@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const ContainerNavBar = styled.nav`
   display: flex;
-  justify-content: space-between; /* Alinha logo e botão */
-  align-items: center; /* Alinha items verticalmente */
+  justify-content: space-between; 
+  align-items: center; 
   padding: 10px 20px;
   width: 100%;
   height: 160px;
-  position: relative; /* Para o overlay */
+  position: relative;
   z-index: 2;
 
   @media (max-width: 1024px) {
@@ -30,14 +30,14 @@ export const Logo = styled.div`
 export const SectionLinks = styled.section`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 25px;
   margin-top: 0px;
   width: 80%;
   font-size: 24px;
 
   @media (max-width: 1024px) {
-    width: 65%;
+    width: 70%;
   }
 
   @media (max-width: 768px) {
@@ -47,11 +47,11 @@ export const SectionLinks = styled.section`
 
 export const StyledLink = styled.p`
   margin: 0;
-  width: 250px;
+  max-width: 350px;
   text-align: center;
 
   @media (max-width: 1024px) {
-    width: 170px;
+    max-width: 150px;
   }
 `;
 
