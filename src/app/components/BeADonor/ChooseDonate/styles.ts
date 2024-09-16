@@ -21,7 +21,7 @@ export const SpanChoose = styled.span`
         top: 830px;}
 
     @media (max-width: 425px) {
-        top: 1180px;
+        top: 1320px;
     }
 `;
 

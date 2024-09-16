@@ -39,7 +39,7 @@ export const SectionTitle = styled.div`
   gap: 1rem;
 
   @media (max-width: 425px) {
-    width: 100%;
+    width: 90%;
   }
 `;
 

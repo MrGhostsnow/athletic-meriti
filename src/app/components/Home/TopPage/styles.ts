@@ -58,7 +58,7 @@ export const DescriptionPage = styled.p`
       }
 
       @media (max-width: 425px) {
-        font-size: 56px;
+        font-size: 40px;
       }
 `;
 

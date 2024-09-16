@@ -15,6 +15,8 @@ export const ContainerDonate = styled.div`
     position: relative; 
     justify-content: start;
     background-color: blue;
+
+   
 `;
 
 export const SectionDonate = styled.section`
@@ -32,6 +34,10 @@ export const SectionDonate = styled.section`
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+
+    @media (max-width: 425px) {
+       height: 500px;
     }
 `;
 
@@ -69,7 +75,6 @@ export const SectionButtonDonate = styled.section`
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: #fff;
     height: 200px;
     justify-content: center;
     align-items: center;
