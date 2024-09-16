@@ -147,7 +147,7 @@ const OurMission: React.FC = () => {
           </Text>
           <SectionPartner>
             <Label>Parceiro da Educação</Label>
-            <Image src={shellLogo} alt="Logo" width={200} height={120} />
+            <Image src={shellLogo} alt="Logo" width={120} height={120} />
           </SectionPartner>
         </SectionText>
       </SectionInfoWork>

@@ -45,7 +45,7 @@ const Entrys: React.FC = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/projetos")
+      .get(`${apiUrl}/projetos`)
       .then((response) => {
         setProjects(response.data);
       })
