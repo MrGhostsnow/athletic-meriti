@@ -146,7 +146,7 @@ const OurMission: React.FC = () => {
             inclusão e cidadania.
           </Text>
           <SectionPartner>
-            <Label>Parceiro da Educação</Label>
+            <Label>Patrocinador Master</Label>
             <Image src={shellLogo} alt="Logo" width={120} height={120} />
           </SectionPartner>
         </SectionText>
@@ -161,7 +161,7 @@ const OurMission: React.FC = () => {
             equipe, lidar com pressão e aprender com vitórias e derrotas.
           </Text>
           <SectionPartner className="partner-invert">
-            <Label>Parceiro de Competições</Label>
+            <Label>Patrocinador Master</Label>
             <Image src={saoFranciscoLogo} alt="Logo" width={280} height={150} />
           </SectionPartner>
         </SectionText>
