@@ -67,38 +67,55 @@ const ProjectsQuotation: React.FC = () => {
         <p>Carregando...</p>
       ) : (
         <>
-          {projects.map((project) => (
-            <ProjectCard
-              proponente={project.proponente}
-              type={project.type}
-              imagem={project.imagem}
-              key={project._id}
-              fonteDeRecursos={project.fonteDeRecursos}
-              valorDoProjeto={project.valorDoProjeto}
-              status={project.status}
-              inicio={project.inicio}
-              fim={project.fim}
-              local={project.local}
-              numeroDeBeneficiarios={project.numeroDeBeneficiarios}
-              modalidadeEManifestacao={project.modalidadeEManifestacao}
-              empresasParceiras={project.empresasParceiras}
-              descricao={project.descricao}
-            />
-          ))}
+          {projects.length === 0 && quotation.length === 0 ? (
+            <div
+              style={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+            >
+              <p style={{ fontSize: "24px" }}>
+                Nenhum projeto ou cotação encontrado
+              </p>
+            </div>
+          ) : (
+            <>
+              {projects.map((project) => (
+                <ProjectCard
+                  proponente={project.proponente}
+                  type={project.type}
+                  imagem={project.imagem}
+                  key={project._id}
+                  fonteDeRecursos={project.fonteDeRecursos}
+                  valorDoProjeto={project.valorDoProjeto}
+                  status={project.status}
+                  inicio={project.inicio}
+                  fim={project.fim}
+                  local={project.local}
+                  numeroDeBeneficiarios={project.numeroDeBeneficiarios}
+                  modalidadeEManifestacao={project.modalidadeEManifestacao}
+                  empresasParceiras={project.empresasParceiras}
+                  descricao={project.descricao}
+                />
+              ))}
 
-          {quotation.map((quotation) => (
-            <ProjectCard
-              proponente={quotation.proponente}
-              type={quotation.type}
-              imagem={quotation.imagem}
-              key={quotation._id}
-              valorDoProjeto={quotation.valorDoProjeto}
-              status={quotation.status}
-              inicio={quotation.inicio}
-              fim={quotation.fim}
-              descricao={quotation.descricao}
-            />
-          ))}
+              {quotation.map((quotation) => (
+                <ProjectCard
+                  proponente={quotation.proponente}
+                  type={quotation.type}
+                  imagem={quotation.imagem}
+                  key={quotation._id}
+                  valorDoProjeto={quotation.valorDoProjeto}
+                  status={quotation.status}
+                  inicio={quotation.inicio}
+                  fim={quotation.fim}
+                  descricao={quotation.descricao}
+                />
+              ))}
+            </>
+          )}
         </>
       )}
     </ContainerProjectQuotation>

@@ -14,6 +14,7 @@ export const ContainerProjectQuotation = styled.div`
     justify-content: space-between;
     background-color: #fff;
     padding: 60px 0;
+    min-height: 500px
 `;
 
 
