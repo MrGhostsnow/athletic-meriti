@@ -21,6 +21,7 @@ import coachs from "../../../assets/coachs.png";
 import shellLogo from "../../../assets/shell-logo.png";
 import saoFranciscoLogo from "../../../assets/saofrancisco-logo.png";
 import useWindowSize from "../../../hooks/useWindowSize";
+import rodape from "../../../assets/rodape.png";
 
 const OurMission: React.FC = () => {
   const { width } = useWindowSize();
@@ -31,10 +32,9 @@ const OurMission: React.FC = () => {
         <SectionText>
           <Title>NOSSA MISSÃO</Title>
           <Text>
-            Promover a inclusão social e o desenvolvimento integral de crianças
-            e jovens carentes da comunidade através do basquete, proporcionando
-            um ambiente seguro e estimulante que incentive a prática esportiva,
-            a educação e a cidadania.
+            Promover o acesso à educação, esporte e lazer para crianças,
+            adolescentes e jovens na cidade de São João de Meriti, na região da
+            Baixada Fluminense, transformando vidas e fortalecendo a comunidade.
           </Text>
         </SectionText>
         <SectionImg style={{ background: "#EBC026" }}>
@@ -88,38 +88,58 @@ const OurMission: React.FC = () => {
         <SectionText className="invert-text">
           <Title>NOSSA VISÃO</Title>
           <Text>
-            Ser reconhecido como um modelo de excelência na promoção do esporte
-            como ferramenta de transformação social, inspirando e capacitando
-            jovens a alcançar seu pleno potencial e contribuir positivamente
-            para a sociedade.
+            Ser um agente de transformação social por meio do esporte,
+            promovendo o acesso à educação e ao lazer como direitos
+            fundamentais, capacitando crianças, adolescentes e jovens de São
+            João de Meriti e da Baixada Fluminense para um futuro melhor.
           </Text>
         </SectionText>
       </SectionInfo>
-      <SectionInfo>
+      <SectionInfo
+        style={{
+          height: width > 768 ? 620 : width <= 425 ? 500 : 550,
+          justifyContent: width > 425 ? "space-around" : "flex-start",
+          marginTop: width > 768 ? "0" : "-20px",
+        }}
+      >
         <SectionText>
           <Title>NOSSOS VALORES</Title>
-          <Text>
-            No Athletic Meriti, prezamos pela inclusão e respeito, promovendo a
-            autodisciplina, a excelência e o comprometimento. Valorizamos a
-            diversidade e fortalecemos a comunidade, proporcionando um ambiente
-            onde todos possam crescer e se desenvolver integralmente.
+          <Text id="values-text" style={{ width: "100%" }}>
+            1. Inclusão Social: Promover a inclusão social de crianças,
+            adolescentes e jovens, independentemente de sua origem
+            socioeconômica, gênero ou origem étnica, por meio do esporte e da
+            educação.
+            <br /> 2. Integridade: Atuar com ética e integridade, garantindo que
+            todas as atividades e parcerias estejam alinhadas com os princípios
+            de transparência e responsabilidade.
+            <br /> 3. Comprometimento com a Comunidade: Demonstrar compromisso
+            sólido e contínuo com as comunidades insertas em São João de Meriti
+            e da Baixada Fluminense, buscando ativamente melhorar a qualidade de
+            vida das pessoas da região.
           </Text>
         </SectionText>
-        <SectionImg style={{ background: "#DD8934" }}>
+        <SectionImg
+          style={{
+            background: "#DD8934",
+            display: width > 768 ? "flex" : "none",
+            marginTop: width > 768 ? "100px" : "0px",
+          }}
+        >
           <Image
             src={coachs}
             alt="Logo"
-            width={600}
-            height={width > 700 ? 389 : 300}
+            width={500}
+            height={width > 700 ? 359 : 300}
             style={{
+              display: width > 768 ? "flex" : "none",
               position: "relative",
-              top: width > 700 ? "-45px" : "-0px",
+              top: width > 700 ? "-30px" : "-0px",
               left: width > 700 ? "0" : "10px",
             }}
           />
         </SectionImg>
       </SectionInfo>
-      <SpanHowWeWork>Como trabalhamos</SpanHowWeWork>
+      <SpanHowWeWork>Nossos programas</SpanHowWeWork>
       <SectionInfoWork className="column-reverse">
         <SectionImg
           style={{
@@ -137,32 +157,35 @@ const OurMission: React.FC = () => {
           />
         </SectionImg>
         <SectionText className="invert-text">
-          <Title>EDUCAÇÃO ESPORTIVA</Title>
-          <Text>
-            Oferecemos treinamentos regulares de basquetebol para crianças,
-            adolescentes e jovens, visando não apenas o desenvolvimento de
-            habilidades esportivas, mas também a promoção de valores essenciais,
-            como responsabilidade, persistência, ética de trabalho, resiliência,
-            inclusão e cidadania.
+          <Title>ESPORTIVA EDUCACIONAL</Title>
+          <Text style={{ width: "100%" }}>
+            A Athletic Meriti alcançou um marco importante com a aprovação na
+            Lei Federal de Incentivo ao Esporte, que permitiu a captação de
+            recursos para fortalecer nosso programa. Oferecemos treinamentos de
+            basquete para crianças, adolescentes e jovens, promovendo o
+            desenvolvimento de habilidades esportivas e valores como
+            responsabilidade, ética, resiliência e inclusão.
           </Text>
           <SectionPartner>
-            <Label>Patrocinador Master</Label>
-            <Image src={shellLogo} alt="Logo" width={120} height={120} />
+            {/* <Label>Patrocinador Master</Label>
+            <Image src={shellLogo} alt="Logo" width={180} height={180} /> */}
           </SectionPartner>
         </SectionText>
       </SectionInfoWork>
       <SectionInfoWork>
         <SectionText>
-          <Title>COMPETIÇÕES E CAMPEONATOS</Title>
-          <Text>
-            Participamos de competições desportivas que são essenciais para o
-            desenvolvimento integral de nossos alunos, oferecendo a chance de
-            aplicar habilidades e valores, superar obstáculos, trabalhar em
-            equipe, lidar com pressão e aprender com vitórias e derrotas.
+          <Title>COMPETIÇÕES ESPORTIVAS</Title>
+          <Text style={{ width: "100%" }}>
+            Participamos de competições, como a Liga Super Basketball, que reúne
+            mais de 150 equipes do estado do Rio de Janeiro. Competimos nas
+            categorias sub-12, sub-14, sub-16, sub-18 e adulto. Esses eventos
+            oferecem aos nossos alunos a chance de aplicar suas habilidades e
+            valores, além de promover o crescimento pessoal e o amadurecimento
+            emocional.
           </Text>
           <SectionPartner className="partner-invert">
-            <Label>Patrocinador Master</Label>
-            <Image src={saoFranciscoLogo} alt="Logo" width={280} height={150} />
+            {/* <Label>Patrocinador Master</Label>
+            <Image src={saoFranciscoLogo} alt="Logo" width={280} height={150} /> */}
           </SectionPartner>
         </SectionText>
         <SectionImg
@@ -181,6 +204,11 @@ const OurMission: React.FC = () => {
           />
         </SectionImg>
       </SectionInfoWork>
+      <Image
+        src={rodape}
+        alt="Logo"
+        style={{ width: width > 1024 ? 1080 : 700 }}
+      />
     </ContainerOurMission>
   );
 };

@@ -20,7 +20,7 @@ export const SectionInfo = styled.div`
     align-items: center;
     justify-content: space-around;
     width: 90%;
-    height: 400px;
+    height: 600px;
 
     &.first-info {
         margin-top: 60px;
@@ -31,6 +31,10 @@ export const SectionInfo = styled.div`
     }
 
     &.column-reverse {
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+        }
+
         @media (max-width: 768px) {
             flex-direction: column-reverse;
         }
@@ -38,13 +42,18 @@ export const SectionInfo = styled.div`
     
 
     @media (max-width: 1024px) {
-        height:450px;
+        height:700px;
+        flex-direction: column;
     }
 
     @media (max-width: 768px) {
         flex-direction: column;
         height: 620px;
 
+    }
+
+    @media (max-width: 425px) {
+        margin-top: -20px;
     }
 `;
 
@@ -56,6 +65,10 @@ export const SectionInfoWork = styled.div`
     height: 650px;
 
     &.column-reverse {
+        @media (max-width: 1024px) {
+            flex-direction: column-reverse;
+        }
+
         @media (max-width: 768px) {
             flex-direction: column-reverse;
         }
@@ -63,7 +76,8 @@ export const SectionInfoWork = styled.div`
     
 
     @media (max-width: 1024px) {
-        height:680px;
+        height:820px;
+        flex-direction: column;
     }
 
     @media (max-width: 768px) {
@@ -81,6 +95,10 @@ export const SectionText = styled.div`
 
     @media (max-width: 1024px) {
        gap: 10px;
+       align-items: center;
+       text-align: center;
+       width: 100%;
+       height: 200px;
     }
 
     @media (max-width: 768px) {
@@ -93,6 +111,15 @@ export const SectionText = styled.div`
     &.invert-text {
         align-items: flex-end;
         text-align: end;
+
+        @media (max-width: 1024px) {
+       gap: 10px;
+       align-items: center;
+       text-align: center;
+       width: 100%;
+       height: 200px;
+    }
+
 
         @media (max-width: 768px) {
             align-items: center;
@@ -120,6 +147,10 @@ export const Text = styled.p`
     @media (max-width: 425px) {
         font-size: 20px;
     }
+
+    &.values-text {
+        border: 1px solid #77BD10;
+    }
 `;
 
 export const SectionImg = styled.div`
@@ -145,7 +176,7 @@ export const SectionPartner = styled.div`
     align-items: center;
     justify-content: center;
     height: 185px;
-    gap: 20px;
+    gap: 10px;
     font-family: 'Inter';
 
     &.partner-invert {
@@ -180,6 +211,10 @@ export const SpanHowWeWork = styled.span`
     border-radius: 24px;
     font-size: 50px;
     background-color: #77BD10;
+
+    @media (max-width: 1024px) {
+        margin-top: 20px;
+    }
 
     @media (max-width: 768px) {
         width: 650px;
